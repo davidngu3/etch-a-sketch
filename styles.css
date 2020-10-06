@@ -17,10 +17,6 @@ body {
     flex-direction: column;
 }
 
-#new {
-    margin-top: 10px;
-}
-
 #title {
     font-size: 4em;
     color: #AD5B28;
@@ -33,16 +29,27 @@ body {
     flex-direction: row;
 }
 
+#button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 button {
     font-family: 'Sansita Swashed', cursive;
     border-style: solid;
     background-color: #FA9252;
     color: #AD3815;
-    padding: 15px 32px;
+    padding: 14px 10px;
+    border-radius: 8%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 1.5em;
+    width: 150px;
+    margin-top: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .cell {

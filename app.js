@@ -3,16 +3,23 @@ window.onload = () => {
     let gridContainer = document.getElementById("grid-container");
     createGrid(gridContainer, 16);
 
-    let clearBtn = document.getElementById("new");
+    let newBtn = document.getElementById("new");
+    let clearBtn = document.getElementById("clear");
+    
+    clearBtn.addEventListener('click', () => {
+        let cells = document.querySelectorAll(".cell");
+        cells.forEach(cell => {
+            cell.classList.remove('draw');
+        })
+    })
 
     // when click 'clear' button: remove 'draw' class from all cells
-    clearBtn.addEventListener('click', () => {
+    newBtn.addEventListener('click', () => {
         let newSize = prompt("Enter a new grid size 1-100");
         if (!(newSize >= 1 && newSize <= 100)) {
             alert("Please enter a size between 1 and 100");
             return;
         }
-            
         createGrid(gridContainer, newSize)
     });
 };
