@@ -1,32 +1,31 @@
 window.onload = () => {
-    // populate grid with cells
+    // Initialize 16x16 grid
     let gridContainer = document.getElementById("grid-container");
-    createGrid(gridContainer);
+    createGrid(gridContainer, 16);
 
-    var cells = document.querySelectorAll(".cell");
     let clearBtn = document.getElementById("clear");
-
-    // add draw event listener to each cell
-    cells.forEach(cell => {
-        cell.addEventListener('mouseover', draw);
-    })
 
     // when click 'clear' button: remove 'draw' class from all cells
     clearBtn.addEventListener('click', () => {
-        cells.forEach(cell => {
-            cell.classList.remove('draw');
-        })
+        let newSize = prompt("Enter a new grid size 1-100");
+        createGrid(gridContainer, newSize)
     });
 };
 
-function createGrid(gridContainer) {
-    for (let r = 0; r < 16; r++) {
+function createGrid(gridContainer, newSize) {
+    // clear current grid
+    while(gridContainer.firstChild){
+        gridContainer.removeChild(gridContainer.firstChild);
+    }
+
+    for (let r = 0; r < newSize; r++) {
         let gridRow = document.createElement('div');
         gridRow.classList.add("row");
 
-        for (let c = 0; c < 16; c++) {
+        for (let c = 0; c < newSize; c++) {
             let gridCell = document.createElement('div');
             gridCell.classList.add("cell");
+            gridCell.addEventListener('mouseover', draw);
             gridRow.appendChild(gridCell);
         }
 
