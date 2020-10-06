@@ -8,6 +8,11 @@ window.onload = () => {
     // when click 'clear' button: remove 'draw' class from all cells
     clearBtn.addEventListener('click', () => {
         let newSize = prompt("Enter a new grid size 1-100");
+        if (!(newSize >= 1 && newSize <= 100)) {
+            alert("Please enter a size between 1 and 100");
+            return;
+        }
+            
         createGrid(gridContainer, newSize)
     });
 };
