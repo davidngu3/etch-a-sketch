@@ -3,7 +3,7 @@ window.onload = () => {
     let gridContainer = document.getElementById("grid-container");
     createGrid(gridContainer, 16);
 
-    let clearBtn = document.getElementById("clear");
+    let clearBtn = document.getElementById("new");
 
     // when click 'clear' button: remove 'draw' class from all cells
     clearBtn.addEventListener('click', () => {

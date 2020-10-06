@@ -1,4 +1,5 @@
 body {
+    background-color: #17AAAD;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,15 +7,24 @@ body {
 }
 
 #grid-container {
-    margin-top: 50px;
-    width: 700px;
-    height: 700px;
+    border-style: solid;
+    border-color: #A15347;
+    border-radius: 2%;
+    border-width: 10px;
+    width: 500px;
+    height: 500px;
     display: flex;
     flex-direction: column;
 }
 
-#clear {
-    margin-top: 20px;
+#new {
+    margin-top: 10px;
+}
+
+#title {
+    font-size: 4em;
+    color: #AD5B28;
+    font-family: 'Sansita Swashed', cursive;
 }
 
 .row {
@@ -23,7 +33,20 @@ body {
     flex-direction: row;
 }
 
+button {
+    font-family: 'Sansita Swashed', cursive;
+    border-style: solid;
+    background-color: #FA9252;
+    color: #AD3815;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+}
+
 .cell {
+    background-color: white;
     flex: 1; 
     border-color: black;
     border-width: 1px;
@@ -31,5 +54,5 @@ body {
 }
 
 .draw {
-    background-color: cyan;
+    background-color: #FFA56E;
 }
