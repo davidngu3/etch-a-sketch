@@ -1,1 +1,4 @@
-This is an etch a sketch using js/css/html
+A mini-project which emulates an etch-a-sketch with solid colour.
+Features resizing options and clearing
+
+Technologies used: Pure HTML/CSS/JS
